@@ -5,17 +5,17 @@
     margin-top: 10px;
 }
 
-.post-enter {
+.postAnim-enter {
     opacity: 0;
 }
-.post-enter-active {
+.postAnim-enter-active {
     opacity: 1;
     transition: opacity 500ms ease-in;
 }
-.post-exit {
+.postAnim-exit {
     opacity: 1;
 }
-.post-exit-active {
+.postAnim-exit-active {
     opacity: 0;
     transition: opacity 500ms ease-in;
 }

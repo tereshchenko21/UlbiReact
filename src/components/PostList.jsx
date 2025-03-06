@@ -1,11 +1,9 @@
 import PostItem from "./PostItem"
 import '../components/PostList.scss';
 import { CSSTransition, TransitionGroup, } from 'react-transition-group';
-import { useRef } from 'react';
 
 export default function PostList({posts, title, remove}) {
 
-    const nodeRef = useRef(null);
 
     if (!posts.length) {
         return (
@@ -22,15 +20,10 @@ export default function PostList({posts, title, remove}) {
                 {posts.map((post, index) => (
                         <CSSTransition
                             key={post.id}
-                            nodeRef={nodeRef}
                             timeout={500}
-                            classNames="post"
-                            onEnter={() => console.log("Entering:", post.id)}
-                            onEntering={() => console.log("EnteringActive:", post.id)}
-                            onExit={() => console.log("Exiting:", post.id)}
-                            onExiting={() => console.log("ExitingActive:", post.id)}
+                            classNames="postAnim"
                         >
-                            <PostItem remove={remove} number={index + 1} post={post} nodeRef={nodeRef}/>
+                            <PostItem remove={remove} number={index + 1} post={post}/>
                         </CSSTransition>
                     )
                 )}

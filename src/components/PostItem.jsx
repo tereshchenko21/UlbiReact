@@ -2,7 +2,7 @@ import '../components/PostItem.scss'
 
 export default function PostItem(props) {
     return (
-        <div className="post" ref={props.nodeRef}>
+        <div className="post">
             <div className="post__content">
                 <div className="post__data">
                     <div className="post__id">

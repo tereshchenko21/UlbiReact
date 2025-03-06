@@ -34,7 +34,6 @@ function App() {
     }, [filterPosts, sortedPosts])
 
     function removePost(postID) {
-        console.log("Removing post with id:", postID)
         setPosts((post) => post.filter(p => p.id !== postID));
     }
 
