@@ -1,0 +1,20 @@
+.ModalWindow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba($color: #000000, $alpha: 0.5);
+    display: none;
+}
+.ModalContent {
+    width: 750px;
+    padding: 25px;
+    border-radius: 16px;
+    background-color: #fff;
+}
+.ModalActive{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
